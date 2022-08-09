@@ -1,0 +1,108 @@
+<script>
+    
+    //我是註解
+    /*我也是註解*/
+    
+    //關係運算子 < > <= >= ==等於 !=不等於
+    //邏輯運算子 && ||
+    //指定運算子 += -= *= /= %=
+    //if...else 語法結構 if (){}
+
+    var n=Math.floor(Math.random()*100);//向下取整數會回傳小於等於所給數字的最大整數 cell向上取整數
+
+    if (n >= 50)
+        console.log(n+" 大於等於50 ");
+    else{
+        console.log(n+" 小於50 ")
+    }
+
+    //使用三元運算式 判斷式 ? (true) : (false)
+    n>=50 ? (
+        console.log(n+" 大於等於50 ")
+    ):(
+        console.log(n+" 小於50 ")
+    );
+    
+    //for(設定初值 ; 判斷條件 ; 設定增減量){}
+    //變數宣告 var 變數名稱 = 指定的值
+
+    var x = 5;
+    var y = 0;
+
+    if (x == 1 && y== 0){
+        alert('condition1')
+    }
+    else{
+        alert('elsecondition')
+    }
+
+    for (i=1; i<=10; i++){
+        console.log(i + "平方 = " + (i*i));
+    }
+        console.log(" 現在i值 = " + i);
+
+    a = 5 , b = 3;
+    console.log("a = " + a);//5
+    console.log("a = " + a++ + " , a++ =" + a);//5 6
+    console.log("b = " + b);//3
+    console.log("b = " + ++b + " , ++b =" + b);//4 4
+
+    var day;
+         var a = new Date().getDay();
+         switch (new Date().getDay()) {
+         case 0://比對子不可以重複
+            day = "星期日";
+            break;
+         case 1:
+            day = "星期一";
+            break;
+         case 2:
+            day = "星期二";
+            break;
+         case 3:
+            day = "星期三";
+            break;
+         case 4:
+            day = "星期四";
+            break;
+         case 5:
+            day = "星期五";
+            break;
+         case 6:
+            day = "星期六";
+         }
+         console.log("今天是 " + day)
+         console.log("a: " + a)
+
+    //continue and break 敘述
+    for (a = 0 ; a <= 10 ; a++){
+        if (a === 3){
+            console.log(a);
+            continue;//再回到迴圈
+        }
+        if (a === 8){
+            console.log(a);
+            break;//跳離迴圈
+        }
+        console.log("for loop a="+a);
+    }
+
+    //陣列的宣告 new Array("英文","數學","國文","歷史","地理")，必須式相同資料型態
+    //Array
+    //鎮獵取長度 用length 陣列的索引值從0開始
+    arrayMajor=new Array("英文","數學","國文","歷史","地理"); //宣告陣列
+    for (i = 0; i < arrayMajor.length; i++){  //利用length屬性取得陣列的元素個數
+        console.log(`第${i+1}個陣列元素是 ${arrayMajor[i]}`);
+    }
+
+    var arr = [1, 2, 3];
+    var iter = arr[Symbol.iterator]();  //Symbol.iterator 屬性的值為一個符合迭代器協議的函式
+    console.log(iter)
+    console.log(iter.next())
+    console.log(iter.next())
+    console.log(iter.next())
+    console.log(iter.next())
+
+    
+
+</script>

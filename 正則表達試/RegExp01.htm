@@ -1,0 +1,43 @@
+<meta charset="UTF-8" />
+<script>
+    var reg = /you/;//比對位置
+    var target = "just do you best you can!"
+    console.log(target.search(reg));
+
+
+    var target = " 18, 2150, 310, Sunday, Monday, Thusday "
+
+    var reg1 = /[f-m]/gi;
+    var reg2 = /Sunday,+/g;
+    var reg3 = /\d{3,4}/g;
+
+    console.log(target.match(reg1));
+    console.log(target.match(reg2));
+    console.log(target.match(reg3));
+
+    var target = "There's a hero.If you look inside your heart.You don't have to be afraid of what you are.There's an answer If you reach into your soul And the sorrow that you know will melt away."
+
+    //you出現幾次
+    console.group("查詢某字出現次數")
+    reg = /you\b/gi; //\b 一個單字範圍
+    var result = target.match(reg);
+    console.log(result);
+    console.log("you 出現", result.length ,"次");
+    console.groupEnd("查詢某字出現次數")
+
+    var target = "18, 2150, 310\n Sunday, Monday, Tuesday"
+
+    var reg1 = /^18/gi;
+    var reg2 = /day$/g;
+    var reg3 = /Tuesday$/gi;
+    var reg4 = /310$/;
+    var reg5 = /310$/m;
+
+    console.log(target.match(reg1));
+    console.log(target.match(reg2));
+    console.log(target.match(reg3));
+    console.log(target.match(reg4));
+    console.log(target.match(reg5));
+
+
+</script>
